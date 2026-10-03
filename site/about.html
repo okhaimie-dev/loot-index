@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method — The Loot Index</title>
+<meta name="description" content="How The Loot Index ranks all 8,000 Loot bags, and why item rarity is noise.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="index.html">THE LOOT INDEX</a>
+    <nav class="main">
+      <a href="index.html">Search</a>
+      <a href="leaderboards.html">Leaderboards</a>
+      <a href="about.html">Method</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="kicker">METHODOLOGY</div>
+    <h1>Why greatness is the only ranking that isn't noise.</h1>
+  </section>
+
+  <section class="panel">
+    <h2>The contract's math</h2>
+    <p class="muted">The original Loot contract generates each item with a single hash per slot.
+      It picks a base item with <code>rand % length</code> and greatness with <code>rand % 21</code>.
+      Every item list and every modifier list is drawn the same way — <strong>uniformly</strong>.
+      There are no rare weapons, no rare suffixes, no rare anything. Observed frequency differences
+      over 8,000 bags are sampling noise, not design.</p>
+    <p class="muted">Greatness is different: it has 21 levels, it unlocks the visible decorations
+      ("of Skill", <code>"Grim Shout"</code>, <code>+1</code>), and it stacks across all eight slots.
+      It is the only per-item value whose sum creates a real distribution. So the index ranks bags by
+      <strong>the sum of the eight greatness rolls</strong>.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Ranking rules</h2>
+    <p class="muted">Score tuple, in order:</p>
+    <ol class="muted">
+      <li>Greatness sum (0–160 possible, 22–140 observed)</li>
+      <li>Number of <code>+1</code> items (greatness 20)</li>
+      <li>Number of named items (greatness ≥ 19)</li>
+      <li>Best single item</li>
+      <li>Lower bag ID (deterministic display order only)</li>
+    </ol>
+    <p class="muted">Bags with the same score tuple share the same rank and percentile.
+      <code>top_pct</code> counts strictly better tuples only, so a true tie never pushes another
+      bag down.</p>
+  </section>
+
+  <section class="panel">
+    <h2>What we don't rank</h2>
+    <p class="muted"><strong>Item rarity.</strong> Under uniform generation it is noise. Any site
+      claiming a rare Ghost Wand is measuring its own sample, not the contract.</p>
+    <p class="muted"><strong>Visible names.</strong> Hidden modifiers are known for all 8,000 bags,
+      so a bag's rank is final even before its greatness is revealed. This is why the numbers here
+      can differ from tools that only read visible names.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Data and verification</h2>
+    <p class="muted">The dataset is generated from the canonical
+      <a href="https://github.com/Provable-Games/stark-loot">stark-loot</a> verbose fixture — all
+      8,000 bags, every hidden modifier — and numeric IDs, tiers, slots, and combat types are parsed
+      directly from the Cairo source.</p>
+    <p class="muted">Every bag page can verify itself against the deployed stateless
+      <a href="https://voyager.online/contract/0x05817c9625ad12198ebe04cc28e827e3b4d09465ddce16a6d7fc628afa3243ab">stark_loot</a>
+      contract: one <code>get_packed_bag(bag_id)</code> call returns a single felt, which the page
+      decodes with the documented 29-bit wire layout and compares field by field. 40 fields, no
+      trust required.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Roadmap</h2>
+    <ul class="muted">
+      <li><strong>Dungeon power score</strong> — once the Loot Dungeon's bag mechanic is public,
+        a second score using real game stats and modifier effects.</li>
+      <li><strong>Item boards</strong> — best individual items per slot.</li>
+      <li><strong>Collections</strong> — rank a wallet holding several bags.</li>
+      <li><strong>Open data</strong> — the full dataset is a plain JSON build anyone can reuse.</li>
+    </ul>
+  </section>
+
+  <div class="notice">Unofficial community project. Not affiliated with Loot, Provable Games,
+    or Cartridge. Loot is public domain; this implementation is MIT licensed.</div>
+</main>
+
+<footer class="site">
+  <div class="inner">
+    <div>Greatness is the only stat the contract rolls.</div>
+    <div>© <span id="year"></span> The Loot Index · <a href="leaderboards.html">Leaderboards</a> · <a href="about.html">Method</a></div>
+  </div>
+</footer>
+
+<script type="module">
+  import { initHeader, initFooterYear } from "./common.js";
+  initHeader();
+  initFooterYear();
+</script>
+</body>
+</html>

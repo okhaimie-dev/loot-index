@@ -1,0 +1,720 @@
+{
+ "generated_from": "/private/tmp/stark-loot/src/core.cairo",
+ "items": {
+  "Pendant": {
+   "id": 1,
+   "tier": 1,
+   "slot": "neck",
+   "type": null
+  },
+  "Necklace": {
+   "id": 2,
+   "tier": 1,
+   "slot": "neck",
+   "type": null
+  },
+  "Amulet": {
+   "id": 3,
+   "tier": 1,
+   "slot": "neck",
+   "type": null
+  },
+  "Silver Ring": {
+   "id": 4,
+   "tier": 2,
+   "slot": "ring",
+   "type": null
+  },
+  "Bronze Ring": {
+   "id": 5,
+   "tier": 3,
+   "slot": "ring",
+   "type": null
+  },
+  "Platinum Ring": {
+   "id": 6,
+   "tier": 1,
+   "slot": "ring",
+   "type": null
+  },
+  "Titanium Ring": {
+   "id": 7,
+   "tier": 1,
+   "slot": "ring",
+   "type": null
+  },
+  "Gold Ring": {
+   "id": 8,
+   "tier": 1,
+   "slot": "ring",
+   "type": null
+  },
+  "Ghost Wand": {
+   "id": 9,
+   "tier": 1,
+   "slot": "weapon",
+   "type": "Magic_or_Cloth"
+  },
+  "Grave Wand": {
+   "id": 10,
+   "tier": 2,
+   "slot": "weapon",
+   "type": "Magic_or_Cloth"
+  },
+  "Bone Wand": {
+   "id": 11,
+   "tier": 3,
+   "slot": "weapon",
+   "type": "Magic_or_Cloth"
+  },
+  "Wand": {
+   "id": 12,
+   "tier": 5,
+   "slot": "weapon",
+   "type": "Magic_or_Cloth"
+  },
+  "Grimoire": {
+   "id": 13,
+   "tier": 1,
+   "slot": "weapon",
+   "type": "Magic_or_Cloth"
+  },
+  "Chronicle": {
+   "id": 14,
+   "tier": 2,
+   "slot": "weapon",
+   "type": "Magic_or_Cloth"
+  },
+  "Tome": {
+   "id": 15,
+   "tier": 3,
+   "slot": "weapon",
+   "type": "Magic_or_Cloth"
+  },
+  "Book": {
+   "id": 16,
+   "tier": 5,
+   "slot": "weapon",
+   "type": "Magic_or_Cloth"
+  },
+  "Divine Robe": {
+   "id": 17,
+   "tier": 1,
+   "slot": "chest",
+   "type": "Magic_or_Cloth"
+  },
+  "Silk Robe": {
+   "id": 18,
+   "tier": 2,
+   "slot": "chest",
+   "type": "Magic_or_Cloth"
+  },
+  "Linen Robe": {
+   "id": 19,
+   "tier": 3,
+   "slot": "chest",
+   "type": "Magic_or_Cloth"
+  },
+  "Robe": {
+   "id": 20,
+   "tier": 4,
+   "slot": "chest",
+   "type": "Magic_or_Cloth"
+  },
+  "Shirt": {
+   "id": 21,
+   "tier": 5,
+   "slot": "chest",
+   "type": "Magic_or_Cloth"
+  },
+  "Crown": {
+   "id": 22,
+   "tier": 1,
+   "slot": "head",
+   "type": "Magic_or_Cloth"
+  },
+  "Divine Hood": {
+   "id": 23,
+   "tier": 2,
+   "slot": "head",
+   "type": "Magic_or_Cloth"
+  },
+  "Silk Hood": {
+   "id": 24,
+   "tier": 3,
+   "slot": "head",
+   "type": "Magic_or_Cloth"
+  },
+  "Linen Hood": {
+   "id": 25,
+   "tier": 4,
+   "slot": "head",
+   "type": "Magic_or_Cloth"
+  },
+  "Hood": {
+   "id": 26,
+   "tier": 5,
+   "slot": "head",
+   "type": "Magic_or_Cloth"
+  },
+  "Brightsilk Sash": {
+   "id": 27,
+   "tier": 1,
+   "slot": "waist",
+   "type": "Magic_or_Cloth"
+  },
+  "Silk Sash": {
+   "id": 28,
+   "tier": 2,
+   "slot": "waist",
+   "type": "Magic_or_Cloth"
+  },
+  "Wool Sash": {
+   "id": 29,
+   "tier": 3,
+   "slot": "waist",
+   "type": "Magic_or_Cloth"
+  },
+  "Linen Sash": {
+   "id": 30,
+   "tier": 4,
+   "slot": "waist",
+   "type": "Magic_or_Cloth"
+  },
+  "Sash": {
+   "id": 31,
+   "tier": 5,
+   "slot": "waist",
+   "type": "Magic_or_Cloth"
+  },
+  "Divine Slippers": {
+   "id": 32,
+   "tier": 1,
+   "slot": "foot",
+   "type": "Magic_or_Cloth"
+  },
+  "Silk Slippers": {
+   "id": 33,
+   "tier": 2,
+   "slot": "foot",
+   "type": "Magic_or_Cloth"
+  },
+  "Wool Shoes": {
+   "id": 34,
+   "tier": 3,
+   "slot": "foot",
+   "type": "Magic_or_Cloth"
+  },
+  "Linen Shoes": {
+   "id": 35,
+   "tier": 4,
+   "slot": "foot",
+   "type": "Magic_or_Cloth"
+  },
+  "Shoes": {
+   "id": 36,
+   "tier": 5,
+   "slot": "foot",
+   "type": "Magic_or_Cloth"
+  },
+  "Divine Gloves": {
+   "id": 37,
+   "tier": 1,
+   "slot": "hand",
+   "type": "Magic_or_Cloth"
+  },
+  "Silk Gloves": {
+   "id": 38,
+   "tier": 2,
+   "slot": "hand",
+   "type": "Magic_or_Cloth"
+  },
+  "Wool Gloves": {
+   "id": 39,
+   "tier": 3,
+   "slot": "hand",
+   "type": "Magic_or_Cloth"
+  },
+  "Linen Gloves": {
+   "id": 40,
+   "tier": 4,
+   "slot": "hand",
+   "type": "Magic_or_Cloth"
+  },
+  "Gloves": {
+   "id": 41,
+   "tier": 5,
+   "slot": "hand",
+   "type": "Magic_or_Cloth"
+  },
+  "Katana": {
+   "id": 42,
+   "tier": 1,
+   "slot": "weapon",
+   "type": "Blade_or_Hide"
+  },
+  "Falchion": {
+   "id": 43,
+   "tier": 2,
+   "slot": "weapon",
+   "type": "Blade_or_Hide"
+  },
+  "Scimitar": {
+   "id": 44,
+   "tier": 3,
+   "slot": "weapon",
+   "type": "Blade_or_Hide"
+  },
+  "Long Sword": {
+   "id": 45,
+   "tier": 4,
+   "slot": "weapon",
+   "type": "Blade_or_Hide"
+  },
+  "Short Sword": {
+   "id": 46,
+   "tier": 5,
+   "slot": "weapon",
+   "type": "Blade_or_Hide"
+  },
+  "Demon Husk": {
+   "id": 47,
+   "tier": 1,
+   "slot": "chest",
+   "type": "Blade_or_Hide"
+  },
+  "Dragonskin Armor": {
+   "id": 48,
+   "tier": 2,
+   "slot": "chest",
+   "type": "Blade_or_Hide"
+  },
+  "Studded Leather Armor": {
+   "id": 49,
+   "tier": 3,
+   "slot": "chest",
+   "type": "Blade_or_Hide"
+  },
+  "Hard Leather Armor": {
+   "id": 50,
+   "tier": 4,
+   "slot": "chest",
+   "type": "Blade_or_Hide"
+  },
+  "Leather Armor": {
+   "id": 51,
+   "tier": 5,
+   "slot": "chest",
+   "type": "Blade_or_Hide"
+  },
+  "Demon Crown": {
+   "id": 52,
+   "tier": 1,
+   "slot": "head",
+   "type": "Blade_or_Hide"
+  },
+  "Dragon's Crown": {
+   "id": 53,
+   "tier": 2,
+   "slot": "head",
+   "type": "Blade_or_Hide"
+  },
+  "War Cap": {
+   "id": 54,
+   "tier": 3,
+   "slot": "head",
+   "type": "Blade_or_Hide"
+  },
+  "Leather Cap": {
+   "id": 55,
+   "tier": 4,
+   "slot": "head",
+   "type": "Blade_or_Hide"
+  },
+  "Cap": {
+   "id": 56,
+   "tier": 5,
+   "slot": "head",
+   "type": "Blade_or_Hide"
+  },
+  "Demonhide Belt": {
+   "id": 57,
+   "tier": 1,
+   "slot": "waist",
+   "type": "Blade_or_Hide"
+  },
+  "Dragonskin Belt": {
+   "id": 58,
+   "tier": 2,
+   "slot": "waist",
+   "type": "Blade_or_Hide"
+  },
+  "Studded Leather Belt": {
+   "id": 59,
+   "tier": 3,
+   "slot": "waist",
+   "type": "Blade_or_Hide"
+  },
+  "Hard Leather Belt": {
+   "id": 60,
+   "tier": 4,
+   "slot": "waist",
+   "type": "Blade_or_Hide"
+  },
+  "Leather Belt": {
+   "id": 61,
+   "tier": 5,
+   "slot": "waist",
+   "type": "Blade_or_Hide"
+  },
+  "Demonhide Boots": {
+   "id": 62,
+   "tier": 1,
+   "slot": "foot",
+   "type": "Blade_or_Hide"
+  },
+  "Dragonskin Boots": {
+   "id": 63,
+   "tier": 2,
+   "slot": "foot",
+   "type": "Blade_or_Hide"
+  },
+  "Studded Leather Boots": {
+   "id": 64,
+   "tier": 3,
+   "slot": "foot",
+   "type": "Blade_or_Hide"
+  },
+  "Hard Leather Boots": {
+   "id": 65,
+   "tier": 4,
+   "slot": "foot",
+   "type": "Blade_or_Hide"
+  },
+  "Leather Boots": {
+   "id": 66,
+   "tier": 5,
+   "slot": "foot",
+   "type": "Blade_or_Hide"
+  },
+  "Demon's Hands": {
+   "id": 67,
+   "tier": 1,
+   "slot": "hand",
+   "type": "Blade_or_Hide"
+  },
+  "Dragonskin Gloves": {
+   "id": 68,
+   "tier": 2,
+   "slot": "hand",
+   "type": "Blade_or_Hide"
+  },
+  "Studded Leather Gloves": {
+   "id": 69,
+   "tier": 3,
+   "slot": "hand",
+   "type": "Blade_or_Hide"
+  },
+  "Hard Leather Gloves": {
+   "id": 70,
+   "tier": 4,
+   "slot": "hand",
+   "type": "Blade_or_Hide"
+  },
+  "Leather Gloves": {
+   "id": 71,
+   "tier": 5,
+   "slot": "hand",
+   "type": "Blade_or_Hide"
+  },
+  "Warhammer": {
+   "id": 72,
+   "tier": 1,
+   "slot": "weapon",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Quarterstaff": {
+   "id": 73,
+   "tier": 2,
+   "slot": "weapon",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Maul": {
+   "id": 74,
+   "tier": 3,
+   "slot": "weapon",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Mace": {
+   "id": 75,
+   "tier": 4,
+   "slot": "weapon",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Club": {
+   "id": 76,
+   "tier": 5,
+   "slot": "weapon",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Holy Chestplate": {
+   "id": 77,
+   "tier": 1,
+   "slot": "chest",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Ornate Chestplate": {
+   "id": 78,
+   "tier": 2,
+   "slot": "chest",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Plate Mail": {
+   "id": 79,
+   "tier": 3,
+   "slot": "chest",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Chain Mail": {
+   "id": 80,
+   "tier": 4,
+   "slot": "chest",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Ring Mail": {
+   "id": 81,
+   "tier": 5,
+   "slot": "chest",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Ancient Helm": {
+   "id": 82,
+   "tier": 1,
+   "slot": "head",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Ornate Helm": {
+   "id": 83,
+   "tier": 2,
+   "slot": "head",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Great Helm": {
+   "id": 84,
+   "tier": 3,
+   "slot": "head",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Full Helm": {
+   "id": 85,
+   "tier": 4,
+   "slot": "head",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Helm": {
+   "id": 86,
+   "tier": 5,
+   "slot": "head",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Ornate Belt": {
+   "id": 87,
+   "tier": 1,
+   "slot": "waist",
+   "type": "Bludgeon_or_Metal"
+  },
+  "War Belt": {
+   "id": 88,
+   "tier": 2,
+   "slot": "waist",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Plated Belt": {
+   "id": 89,
+   "tier": 3,
+   "slot": "waist",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Mesh Belt": {
+   "id": 90,
+   "tier": 4,
+   "slot": "waist",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Heavy Belt": {
+   "id": 91,
+   "tier": 5,
+   "slot": "waist",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Holy Greaves": {
+   "id": 92,
+   "tier": 1,
+   "slot": "foot",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Ornate Greaves": {
+   "id": 93,
+   "tier": 2,
+   "slot": "foot",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Greaves": {
+   "id": 94,
+   "tier": 3,
+   "slot": "foot",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Chain Boots": {
+   "id": 95,
+   "tier": 4,
+   "slot": "foot",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Heavy Boots": {
+   "id": 96,
+   "tier": 5,
+   "slot": "foot",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Holy Gauntlets": {
+   "id": 97,
+   "tier": 1,
+   "slot": "hand",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Ornate Gauntlets": {
+   "id": 98,
+   "tier": 2,
+   "slot": "hand",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Gauntlets": {
+   "id": 99,
+   "tier": 3,
+   "slot": "hand",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Chain Gloves": {
+   "id": 100,
+   "tier": 4,
+   "slot": "hand",
+   "type": "Bludgeon_or_Metal"
+  },
+  "Heavy Gloves": {
+   "id": 101,
+   "tier": 5,
+   "slot": "hand",
+   "type": "Bludgeon_or_Metal"
+  }
+ },
+ "suffixes": {
+  "of Power": 1,
+  "of Giants": 2,
+  "of Titans": 3,
+  "of Skill": 4,
+  "of Perfection": 5,
+  "of Brilliance": 6,
+  "of Enlightenment": 7,
+  "of Protection": 8,
+  "of Anger": 9,
+  "of Rage": 10,
+  "of Fury": 11,
+  "of Vitriol": 12,
+  "of the Fox": 13,
+  "of Detection": 14,
+  "of Reflection": 15,
+  "of the Twins": 16
+ },
+ "name_prefixes": {
+  "Agony": 1,
+  "Apocalypse": 2,
+  "Armageddon": 3,
+  "Beast": 4,
+  "Behemoth": 5,
+  "Blight": 6,
+  "Blood": 7,
+  "Bramble": 8,
+  "Brimstone": 9,
+  "Brood": 10,
+  "Carrion": 11,
+  "Cataclysm": 12,
+  "Chimeric": 13,
+  "Corpse": 14,
+  "Corruption": 15,
+  "Damnation": 16,
+  "Death": 17,
+  "Demon": 18,
+  "Dire": 19,
+  "Dragon": 20,
+  "Dread": 21,
+  "Doom": 22,
+  "Dusk": 23,
+  "Eagle": 24,
+  "Empyrean": 25,
+  "Fate": 26,
+  "Foe": 27,
+  "Gale": 28,
+  "Ghoul": 29,
+  "Gloom": 30,
+  "Glyph": 31,
+  "Golem": 32,
+  "Grim": 33,
+  "Hate": 34,
+  "Havoc": 35,
+  "Honour": 36,
+  "Horror": 37,
+  "Hypnotic": 38,
+  "Kraken": 39,
+  "Loath": 40,
+  "Maelstrom": 41,
+  "Mind": 42,
+  "Miracle": 43,
+  "Morbid": 44,
+  "Oblivion": 45,
+  "Onslaught": 46,
+  "Pain": 47,
+  "Pandemonium": 48,
+  "Phoenix": 49,
+  "Plague": 50,
+  "Rage": 51,
+  "Rapture": 52,
+  "Rune": 53,
+  "Skull": 54,
+  "Sol": 55,
+  "Soul": 56,
+  "Sorrow": 57,
+  "Spirit": 58,
+  "Storm": 59,
+  "Tempest": 60,
+  "Torment": 61,
+  "Vengeance": 62,
+  "Victory": 63,
+  "Viper": 64,
+  "Vortex": 65,
+  "Woe": 66,
+  "Wrath": 67,
+  "Light's": 68,
+  "Shimmering": 69
+ },
+ "name_suffixes": {
+  "Bane": 1,
+  "Root": 2,
+  "Bite": 3,
+  "Song": 4,
+  "Roar": 5,
+  "Grasp": 6,
+  "Instrument": 7,
+  "Glow": 8,
+  "Bender": 9,
+  "Shadow": 10,
+  "Whisper": 11,
+  "Shout": 12,
+  "Growl": 13,
+  "Tear": 14,
+  "Peak": 15,
+  "Form": 16,
+  "Sun": 17,
+  "Moon": 18
+ }
+}

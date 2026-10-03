@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+dist/
+data/verbose_loot.json
+data/bags.json

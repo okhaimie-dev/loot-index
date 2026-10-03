@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bag — The Loot Index</title>
+<meta name="description" content="A single Loot bag ranked by greatness, with full hidden modifiers and on-chain verification.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="index.html">THE LOOT INDEX</a>
+    <nav class="main">
+      <a href="index.html">Search</a>
+      <a href="leaderboards.html">Leaderboards</a>
+      <a href="about.html">Method</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="loading" id="loading">Loading bag…</div>
+  <div class="error" id="error"></div>
+
+  <div id="content" class="hidden">
+    <section class="panel">
+      <div class="bag-hero">
+        <div>
+          <div class="id" id="bag-id">BAG #—</div>
+          <div class="rank-line" id="rank-line"></div>
+          <div class="chips" id="chips" style="margin-top:16px"></div>
+        </div>
+        <div class="greatness">
+          <div class="value" id="greatness">—</div>
+          <div class="label">GREATNESS</div>
+        </div>
+      </div>
+      <div class="row" style="margin-top:22px">
+        <a class="btn small" id="prev">← previous</a>
+        <a class="btn small" id="next">next →</a>
+        <span class="spacer"></span>
+        <a class="btn small" id="opensea" target="_blank" rel="noopener">View on OpenSea</a>
+      </div>
+    </section>
+
+    <div class="grid-2">
+      <section class="panel">
+        <h2>Items</h2>
+        <div class="items" id="items"></div>
+        <label class="muted" style="display:block;margin-top:18px;font-size:13px;cursor:pointer">
+          <input type="checkbox" id="latent"> show latent names (what the hidden modifiers spell at greatness 20)
+        </label>
+      </section>
+
+      <aside>
+        <section class="panel">
+          <h2>Share card</h2>
+          <canvas class="card-preview" id="card"></canvas>
+          <div class="row" style="margin-top:12px">
+            <button class="btn primary" id="download">Download PNG</button>
+            <button class="btn" id="copy">Copy text</button>
+          </div>
+          <div class="muted" id="copy-status" style="margin-top:8px;font-size:13px"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Distribution</h2>
+          <canvas class="histogram" id="histogram"></canvas>
+          <p class="muted" style="font-size:13px;margin-top:8px">
+            Greatness-sum distribution across all 8,000 bags. Your bag is marked in gold.
+          </p>
+        </section>
+
+        <section class="panel">
+          <h2>Verify on Starknet</h2>
+          <p class="muted" style="font-size:13px">Fetch the packed bag from the deployed
+            stateless <code>stark_loot</code> contract and compare all 40 fields.</p>
+          <button class="btn" id="verify">Verify on-chain</button>
+          <div class="verify-list" id="verify-list"></div>
+          <div class="muted" id="verify-status" style="margin-top:10px;font-size:13px"></div>
+        </section>
+      </aside>
+    </div>
+
+    <div class="notice">Greatness is hidden in the contract until revealed. This page uses the
+      canonical fixture's hidden modifier data, so ranks are final even for unrevealed items.</div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="inner">
+    <div>Greatness is the only stat the contract rolls.</div>
+    <div>© <span id="year"></span> The Loot Index · <a href="leaderboards.html">Leaderboards</a> · <a href="about.html">Method</a></div>
+  </div>
+</footer>
+
+<script type="module" src="bag.js"></script>
+</body>
+</html>

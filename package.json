@@ -1,0 +1,9 @@
+{
+  "name": "the-loot-index",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 build_site.py",
+    "serve": "python3 -m http.server -d dist 8080"
+  }
+}

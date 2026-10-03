@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaderboards — The Loot Index</title>
+<meta name="description" content="Top Loot bags by greatness, +1 items, named items, and loadout tier score.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="index.html">THE LOOT INDEX</a>
+    <nav class="main">
+      <a href="index.html">Search</a>
+      <a href="leaderboards.html">Leaderboards</a>
+      <a href="about.html">Method</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="kicker">ALL 8,000 BAGS · TIES SHARE A RANK</div>
+    <h1>Leaderboards</h1>
+    <p class="lede">Greatness is the headline. The other boards are slices of the same
+      hidden data — each link goes to a full bag page with on-chain verification.</p>
+  </section>
+
+  <section class="panel">
+    <div class="tabs" id="tabs"></div>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th><th>Bag</th><th class="num">Greatness</th><th class="num">+1s</th>
+          <th class="num">Named</th><th class="num">Tier score</th><th class="num">Top %</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </section>
+
+  <div class="notice">The tier score is a transparent beta proxy (sum of <code>6 - tier</code> across
+    the eight items), not official Loot Survivor combat power. A real dungeon power score ships once
+    the Loot Dungeon mechanic is confirmed.</div>
+</main>
+
+<footer class="site">
+  <div class="inner">
+    <div>Greatness is the only stat the contract rolls.</div>
+    <div>© <span id="year"></span> The Loot Index · <a href="leaderboards.html">Leaderboards</a> · <a href="about.html">Method</a></div>
+  </div>
+</footer>
+
+<script type="module" src="leaderboards.js"></script>
+</body>
+</html>

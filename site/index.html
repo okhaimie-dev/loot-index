@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Loot Index — every Loot bag, ranked</title>
+<meta name="description" content="All 8,000 Loot bags ranked by greatness — the only stat the contract actually rolls. Look up your bag, see its rank, mint a card.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="index.html">THE LOOT INDEX</a>
+    <nav class="main">
+      <a href="index.html">Search</a>
+      <a href="leaderboards.html">Leaderboards</a>
+      <a href="about.html">Method</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="kicker">ALL 8,000 BAGS · EVERY HIDDEN MODIFIER</div>
+    <h1>Every Loot bag, ranked by the only stat the contract rolls.</h1>
+    <p class="lede">Items and modifiers are drawn uniformly — so "rare items" are noise.
+      Greatness is the one number that varies and stacks. Look up your bag, see where it
+      really stands, and mint a card.</p>
+    <form class="search" id="search">
+      <input type="number" id="bag-input" min="1" max="8000" placeholder="Bag # 1–8000"
+             inputmode="numeric" autocomplete="off" aria-label="Bag ID">
+      <button class="btn primary" type="submit">Look up</button>
+      <button class="btn" type="button" id="random">Random bag</button>
+    </form>
+    <div id="search-error" class="error hidden"></div>
+  </section>
+
+  <section class="stats" id="stats"></section>
+
+  <div class="grid-2">
+    <section class="panel">
+      <h2>Top 10 by greatness</h2>
+      <table>
+        <thead>
+          <tr><th>Rank</th><th>Bag</th><th class="num">Greatness</th><th class="num">+1s</th><th class="num">Named</th><th class="num">Top %</th></tr>
+        </thead>
+        <tbody id="top10"></tbody>
+      </table>
+      <p style="margin-top:14px"><a href="leaderboards.html">Full leaderboards →</a></p>
+    </section>
+
+    <aside>
+      <section class="panel">
+        <h2>How the ranking works</h2>
+        <p class="muted">The Loot contract draws every item and modifier uniformly, so item
+          rarity rankings are sampling noise. Greatness (<code>rand % 21</code>) is the only
+          value that varies per item and stacks across all eight slots.</p>
+        <p class="muted">Bags with identical score tuples share a rank.
+          <a href="about.html">Read the method →</a></p>
+      </section>
+      <section class="panel">
+        <h2>Verified on Starknet</h2>
+        <p class="muted">Every bag page can verify its data against the deployed
+          <a href="about.html">stark_loot</a> contract with one call to
+          <code>get_packed_bag</code> — no trust in this index required.</p>
+      </section>
+    </aside>
+  </div>
+
+  <div class="notice">Unofficial community project, not affiliated with Loot or Provable Games.
+    Data generated from the canonical <a href="about.html">stark-loot</a> fixtures — every hidden
+    modifier included.</div>
+</main>
+
+<footer class="site">
+  <div class="inner">
+    <div>Greatness is the only stat the contract rolls.</div>
+    <div>© <span id="year"></span> The Loot Index · <a href="leaderboards.html">Leaderboards</a> · <a href="about.html">Method</a></div>
+  </div>
+</footer>
+
+<script type="module" src="index.js"></script>
+</body>
+</html>
