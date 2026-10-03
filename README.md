@@ -1,5 +1,7 @@
 # The Loot Index
 
+**Live:** https://okhaimie-dev.github.io/loot-index/
+
 All 8,000 Loot bags ranked by **greatness** — the only stat the original contract actually
 rolls. Static site, zero dependencies, no backend.
 
