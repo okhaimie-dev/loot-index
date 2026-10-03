@@ -9,9 +9,16 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test-and-build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -21,6 +28,11 @@ jobs:
         run: python3 fetch_fixture.py
       - name: Unit tests
         run: python3 -m unittest discover -s tests -v
+      - name: Configure Pages
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - name: Build site
         run: python3 build_site.py
       - name: Upload Pages artifact
